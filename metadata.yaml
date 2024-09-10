@@ -1,0 +1,287 @@
+experimenter: 
+  name: Luisa Abels
+date: 2024/07/29
+project_name: Dopa-Move
+
+subject:
+  name: Rat101
+  cre-line: TH-Cre
+  sex: F
+  hand  edness: Left
+  opsin: Control #Can be Control or Chrimson or Jaws
+  opsin_injection_date: 2024/06/20
+  opsin_location: SNc
+  
+recordings:
+  fiber:
+    channels:
+      CH-1:
+        brain_location: Left-DLS
+      CH-2:
+        brain_location: Right-DLS
+    tool:
+    
+  electrophy:
+  behavior: Poly
+  
+task:  
+  name: HF_55_RandomTrial_NoGoGo_left_both_sound_nico_LaserJAWS_S1_MT1_1sec_NoPadCheck_3000
+
+  subject_position: head-fixed
+  cue_location:
+    LowPitch: Left
+    HighPitch: Left
+  events:
+    poly:
+      -
+        detection:
+          poly_line_num: 33
+        description:
+          event: cue
+          trial_type:
+            stimulation: None
+            go: False
+            cue_type: WhiteNoise
+      - 
+        detection:
+          poly_line_num: 41
+        description:
+          event: cue
+          trial_type: 
+             
+
+      - 
+        detection:
+          poly_line_num: 7
+        description:
+          event: cue
+          trial_type: 
+            stimulation: None
+            go: True
+            cue_type: LowPitch
+
+      - 
+        detection:
+          poly_line_num: 12
+        description:
+          event: cue
+          trial_type: 
+            stimulation: None
+            go: True
+            cue_type: HighPitch
+      -
+        detection:
+          poly_name: MT
+        description:
+          event: mouvement_start
+      -  
+        detection:
+          poly_line_num: [45, 11, 16 ,34]
+        description:
+          event: reward
+
+      -  
+        detection:
+          poly_line_num: 3
+        description:
+          event: trial_start
+      -  
+        detection:
+          poly_line_num: 1
+        description:
+          event: trial_end
+      - 
+        detection:
+          poly_name: 'MT\d+.*'
+          poly_ignore_name: 'erreur'
+        description:
+          event: leverpress
+
+      - 
+        detection:
+          poly_name: 'erreur'
+        description:
+          event: error
+    fiber:
+      -
+        detection:
+          name: Input1
+          duration_min: 0.130
+          duration_max: 0.170
+        description:
+          event: cue
+          trial_type:
+            stimulation: None
+            go: False
+            cue_type: WhiteNoise
+      -
+        detection:
+          name: Input1
+          duration_min: 0.180
+          duration_max: 0.220
+        description:
+          event: cue
+          trial_type:
+            stimulation: "bilateral"
+            go: True
+            cue_type: LowPitch
+      -
+        detection:
+          name: Input1
+          duration_min: 0.020
+          duration_max: 0.060
+        description:
+          event: cue
+          trial_type:
+            stimulation: None
+            go: True
+            cue_type: LowPitch
+      -
+        detection:
+          name: Input1
+          duration_min: 0.080
+          duration_max: 0.120
+        description:
+          event: cue
+          trial_type:
+            stimulation: None
+            go: True
+            cue_type: HighPitch
+      -
+        detection:
+          name: Input2
+        description:
+          event: mouvement_start
+      -
+        detection:
+          name: Input3
+          duration_min: 0.130
+          duration_max: 0.170
+        description:
+          event: reward
+          trial_type:
+            go: False
+      -
+        detection:
+          name: Input3
+          duration_min: 0.170
+        description:
+          event: leverpress
+      -
+        detection:
+          name: Input3
+          duration_max: 0.130
+        description:
+          event: leverpress
+      -
+        detection:
+          name: Input4
+        description:
+          event: error
+
+    #     poly_name: 'MT\d+'
+    #     fiber_event: Input3
+    #     fiber_TTL: TTLP6
+    #     fiber_duration_ms: 
+    #     spike2channel:
+    #     fiber_event: Input2
+    #     fiber_TTL: TTLP5
+    #     fiber_duration_ms: 
+    #     spike2channel:
+        
+    # trial_start:
+    #   poly_line_num: 3
+    #   fiber_event: 
+    #   fiber_TTL: 
+    #   fiber_duration_ms:
+    #   spike2channel: 
+    # cue:
+    #   nogo:
+    #     poly_line_num: 33
+    #     fiber_event: Input1
+    #     fiber_TTL: TTLP2
+    #     fiber_duration_ms: 150
+    #     spike2channel: 
+    #   laser: #implies gocue1
+    #     poly_line_num: 41
+    #     fiber_event: Input1
+    #     fiber_TTL: TTLP2
+    #     fiber_duration_ms: 200
+    #     spike2channel:
+    #   go1nolaser:
+    #     poly_line_num: 7
+    #     fiber_event: Input1
+    #     fiber_TTL: TTLP2
+    #     fiber_duration_ms: 40
+    #     spike2channel:
+    #   go2nolaser:
+    #     poly_line_num: 12
+    #     fiber_event: Input1
+    #     fiber_TTL: TTLP2
+    #     fiber_duration_ms: 100
+    #     spike2channel:
+    # mv_start:
+    #     poly_name: MT
+    #     fiber_event: Input2
+    #     fiber_TTL: TTLP5
+    #     fiber_duration_ms: 
+    #     spike2channel:
+    # leverpress:
+    #     poly_name: 'MT\d+'
+    #     fiber_event: Input3
+    #     fiber_TTL: TTLP6
+    #     fiber_duration_ms: 
+    #     spike2channel:
+    # reward:
+    #     poly_line_num: [45, 11, 16, 34]
+    #     fiber_event: 
+    #     fiber_TTL: TTLP6
+    #     fiber_duration_ms: 
+    #     spike2channel:
+    # lick:
+    #     poly_line_num: 17
+    #     fiber_event: 
+    #     fiber_TTL:
+    #     fiber_duration_ms: 
+    #     spike2channel:
+    # trial_end:
+    #     poly_line_num: 1
+    #     fiber_event: 
+    #     fiber_TTL:
+    #     fiber_duration_ms: 
+    #     spike2channel:
+    # errors:
+    #     poly_name: "erreur"
+    #     fiber_event: Input4
+    #     fiber_TTL: TTLP7
+    #     fiber_duration_ms: 
+    #     spike2channel:
+  opto:
+    name: 
+    laser_protocol:
+      type: continuous #Can be pulse or continuous
+      pulse_info: #omitted if continuous
+        n_pulse: 4
+        frequency_Hz: 15 
+    laser_intensity_mW: 15
+    timing:
+      event: pad_lift #Can be cue, pad_lift, ...
+      start_rel_event_ms: 0 
+      duration_ms: 1000
+      end_event: leverpress #Takes precedence over duration if the event occurs before the duration expires
+
+  
+    
+    
+
+data_files:
+  poly_dat_file: 
+  spike2_file:
+  poly_task_file:
+  fiber_event_file:
+  fiber_recording_file:
+  video_file:
+  
+
+
+
