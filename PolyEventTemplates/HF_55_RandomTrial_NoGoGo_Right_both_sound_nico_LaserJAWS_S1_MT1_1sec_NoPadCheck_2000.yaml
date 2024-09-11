@@ -1,0 +1,81 @@
+task:  
+  name: HF_55_RandomTrial_NoGoGo_Right_both_sound_nico_LaserJAWS_S1_MT1_1sec_NoPadCheck_2000
+
+  subject_position: head-fixed
+  cue_location:
+    LowPitch: Right
+    HighPitch: Right
+  events:
+    poly:
+      -
+        detection:
+          poly_line_num: 33
+        description:
+          event: cue
+          trial_type:
+            stimulation: None
+            go: False
+            cue: WhiteNoise
+      - 
+        detection:
+          poly_line_num: 41
+        description:
+          event: cue
+          trial_type: 
+            stimulation: bilateral
+            go: True
+            cue: LowPitch  
+
+      - 
+        detection:
+          poly_line_num: 7
+        description:
+          event: cue
+          trial_type: 
+            stimulation: None
+            go: True
+            cue: LowPitch
+
+      - 
+        detection:
+          poly_line_num: 12
+        description:
+          event: cue
+          trial_type: 
+            stimulation: None
+            go: True
+            cue: HighPitch
+      -
+        detection:
+          poly_name: MT
+        description:
+          event: mouvement_start
+      -  
+        detection:
+          poly_line_num: [45, 11, 16 ,34]
+        description:
+          event: reward
+
+      -  
+        detection:
+          poly_line_num: 3
+        description:
+          event: trial_start
+      - 
+        detection:
+          poly_name: 'MT\d+'
+          poly_ignore_name: 'erreur'
+        description:
+          event: leverpress
+
+      - 
+        detection:
+          poly_name: 'erreur'
+        description:
+          event: error
+
+
+  
+
+
+

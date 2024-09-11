@@ -1,0 +1,78 @@
+
+    
+
+-
+  detection:
+    name: Input1
+    duration_min: 0.130
+    duration_max: 0.170
+  description:
+    event: cue
+    trial_type:
+      stimulation: None
+      go: False
+      cue_type: WhiteNoise
+-
+  detection:
+    name: Input1
+    duration_min: 0.180
+    duration_max: 0.220
+  description:
+    event: cue
+    trial_type:
+      stimulation: "bilateral"
+      go: True
+      cue_type: LowPitch
+-
+  detection:
+    name: Input1
+    duration_min: 0.020
+    duration_max: 0.060
+  description:
+    event: cue
+    trial_type:
+      stimulation: None
+      go: True
+      cue_type: LowPitch
+-
+  detection:
+    name: Input1
+    duration_min: 0.080
+    duration_max: 0.120
+  description:
+    event: cue
+    trial_type:
+      stimulation: None
+      go: True
+      cue_type: HighPitch
+-
+  detection:
+    name: Input2
+  description:
+    event: mouvement_start
+-
+  detection:
+    name: Input3
+    duration_min: 0.130
+    duration_max: 0.170
+  description:
+    event: reward
+    trial_type:
+      go: False
+-
+  detection:
+    name: Input3
+    duration_min: 0.170
+  description:
+    event: leverpress
+-
+  detection:
+    name: Input3
+    duration_max: 0.130
+  description:
+    event: leverpress
+-
+  detection:
+    name: Input4
+  description:
+    event: error
