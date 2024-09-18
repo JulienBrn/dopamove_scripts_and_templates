@@ -22,7 +22,7 @@ task:
         description:
           event: cue
           trial_type: 
-            stimulation: bilateral
+            stimulation: 4p15Hz
             go: True
             cue: LowPitch
 

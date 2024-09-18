@@ -1,10 +1,10 @@
 task:  
-  name: HF_55_RandomTrial_NoGoGo_Bilat_nico_LaserJAWS_S2_MT2_1sec_NoPadCheck_countery_3000
+  name: HF_55_RandomTrial_NoGoGo_left_both_sound_LaserJAWS_AllTrial_S1_Cue-RT1_1sec_NoPadCheck_3000
 
   subject_position: head-fixed
   cue_location:
     LowPitch: Left
-    HighPitch: Right
+    HighPitch: Left
   events:
     poly:
       -
@@ -18,15 +18,15 @@ task:
             cue: WhiteNoise
       - 
         detection:
-          poly_line_num: 41
+          poly_line_num: 42
         description:
           event: cue
           trial_type: 
             stimulation: 1000ms
             go: True
-            cue: HighPitch
+            cue: LowPitch
 
-      - 
+      - #never reached, all LowPitch Trials with Laser
         detection:
           poly_line_num: 7
         description:
@@ -52,7 +52,7 @@ task:
           event: mouvement_start
       -  
         detection:
-          poly_line_num: [45, 11, 16 ,34]
+          poly_line_num: [46, 11, 16 ,34]
         description:
           event: reward
 

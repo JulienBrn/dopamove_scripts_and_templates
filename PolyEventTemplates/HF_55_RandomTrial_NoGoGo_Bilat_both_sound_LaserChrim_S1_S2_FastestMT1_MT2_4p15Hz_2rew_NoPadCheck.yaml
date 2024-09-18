@@ -1,5 +1,5 @@
 task:  
-  name: HF_55_RandomTrial_NoGoGo_Bilat_nico_LaserJAWS_S2_MT2_1sec_NoPadCheck_countery_3000
+  name: HF_55_RandomTrial_NoGoGo_Bilat_both_sound_LaserChrim_S1_S2_FastestMT1_MT2_4p15Hz_2rew_NoPadCheck
 
   subject_position: head-fixed
   cue_location:
@@ -22,7 +22,16 @@ task:
         description:
           event: cue
           trial_type: 
-            stimulation: 1000ms
+            stimulation: 4p15Hz
+            go: True
+            cue: LowPitch
+      - 
+        detection:
+          poly_line_num: 48
+        description:
+          event: cue
+          trial_type: 
+            stimulation: 4p15Hz
             go: True
             cue: HighPitch
 
@@ -52,7 +61,7 @@ task:
           event: mouvement_start
       -  
         detection:
-          poly_line_num: [45, 11, 16 ,34]
+          poly_line_num: [43, 11, 16 ,34, 50]
         description:
           event: reward
 
